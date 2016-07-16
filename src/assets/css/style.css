@@ -1,0 +1,236 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  color:green; }
+
+/*NAV*/
+.nav-link {
+  margin: 50px; }
+
+.navbar {
+  background: #fff; }
+
+/*JUMBOTRON*/
+.jumbotron {
+  margin-bottom: 0px;
+  height: 700px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background: transparent; }
+
+.background {
+ background: url("../../img/jumbotron-image.jpg") no-repeat center center;  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 700px;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+/*BLOCK1*/
+.row {
+  height: 150px; }
+
+.bb {
+  height: 50%; }
+
+.btn-more {
+  position: relative;
+  margin-left: 50px; }
+
+/*MON STYLE*/
+.container-fluid {
+  padding: 20px; }
+
+section {
+  background: white;
+  height: 700px; }
+
+body {
+  position: relative; }
+
+.Logo {
+  color: white;
+  font-size: 40px;
+  margin: 100px; }
+
+/*Block pr├®sentation*/
+h2 {
+  color: #394B72;
+  text-align: center; }
+
+.title-service {
+  color: #A7C9CC;
+  padding: 15% 0 5% 0; }
+
+.title-contact {
+  color: #A7C9CC; }
+
+.btn-block {
+  width: 50%;
+  margin-left: 50px;
+  margin-left: 100px; }
+
+.btn-default-white {
+  background: #394B72;
+  color: #A7C9CC;
+  margin-left: 25%; }
+
+.btn-default-white:hover {
+  color: #A7C9CC;
+  border: solid #394B72 2px;
+  text-align: center; }
+
+.presentation-block {
+  padding: 25px; }
+
+.presentation-block > img {
+  width: 150px;
+  padding: 25px; }
+
+.banner {
+  background-image: url("../../img/banner1.jpg");
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  top: 0; }
+
+.div-banner {
+  background: rgba(0, 0, 0, 0.6);
+  height: 500px;
+  position: relative;
+  margin-top: -20px; }
+
+.banner2 {
+  background-image: url("../../img/banner2.jpg");
+  background-size: cover;
+  height: 500px; }
+
+/*Portfolio*/
+/*TEAM*/
+.text-area {
+  padding: 80px 0; }
+
+
+
+.div-team {
+  display: inline-block;
+  padding: 20px;
+  height: auto;
+  margin: 0 auto; }
+
+.div-team > img {
+  width: 120px; }
+
+.big-text {
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.rw-portfolio {
+  margin: 0 50px; }
+
+/*DIV CONTACT*/
+.div-contact {
+  padding: 60px; }
+
+.div-general-contact {
+  text-align: center; }
+
+/*FOOTER*/
+hr {
+  margin-left: 30%;
+  width: 50%; }
+
+footer * {
+  background: #2c3e50;
+  color: #A7C9CC; }
+
+.hover {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 5px; }
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: transparent;
+  margin: 10px; }
+
+.hovereffect .overlay {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  padding: 50px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.hovereffect img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: block;
+  max-width: none;
+  position: relative;
+  -webkit-transform: translate3d(-10px, 0, 0);
+  transform: translate3d(-10px, 0, 0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  width: calc(100% + 20px); }
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent; }
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }

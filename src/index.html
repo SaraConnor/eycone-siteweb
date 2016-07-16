@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Eyecone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/scss" href="./assets/css/style.scss">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--Nav -->
+    <div data-load-source="partials/nav.html"></div>
+    <!--End nav-->
+    <!--Jumbotron-->
+    <div data-load-source="partials/jumbotron.html"></div>
+    <!--End-->
+    <main>
+        <!--Block1-->
+        <section data-load-source="partials/presentation.html" id="section1"></section>
+        <!--end Block1-->
+        <div data-load-source="partials/banner1.html"></div>
+        <!-- Clients -->
+        <section data-load-source="partials/clients.html" id="section2"></section>
+        <div class="banner2"></div>
+        <!--PORTFOLIO-->
+        <section data-load-source="partials/portfolio.html" id="section3"></section>
+        <!--TEAM-->
+        <section data-load-source="partials/team.html" id="section4"></section>
+        <section data-load-source="partials/contact.html" id="section5"></section>
+    </main>
+    <!--end Block2-->
+    <footer data-load-source="partials/footer.html" class="footer"></footer>
+    
+    <script src="assets/js/sass.link.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+
+    var DEBUG = true;
+
+    function sectionLoader(cb) {
+        var sources = $('[data-load-source]');
+        var i = 0;
+
+        if(DEBUG) console.log(sources.length + ' sections to load.');
+
+        $.each(sources, function(index, item) {
+            var url = $(item).attr('data-load-source');
+            $.get(url, function(html) {
+                i++;
+                if(DEBUG) console.log('Section : ' + url + ' loaded. ['+ i + '/' + sources.length +']');
+                $(item).html(html);
+                
+                if (i == sources.length) {
+                    if(DEBUG) console.log('[' + i + '/' + sources.length + '] Calling callback.');
+                    cb();
+                }
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        sectionLoader(function() {
+            if(DEBUG) console.log('Section load done.');
+
+            skrollr.init();
+            $('.carousel').carousel();
+          
+        });
+ /*        $(document).ready(function() {
+                $('.scrollTo').click( function() { 
+                    var page = $(this).attr('href'); 
+                    var speed = 750; 
+                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                    return false;
+                });
+            });*/
+
+    });
+
+    </script>
+    <!-- Scroll-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>
